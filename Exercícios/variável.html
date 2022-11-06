@@ -1,0 +1,31 @@
+<script>
+    //var
+    var clima = "Quente"
+    clima = "Frio"
+    console.log(clima);
+
+    //let
+    let Clima = "Muito Quente"
+    Clima = "Muito Frio"
+    console.log(Clima);
+
+    //const (constante, não varia)
+    const tempo = "Quente"
+    console.log(tempo);
+
+    //var é global e, também local (evitar usar)
+    //hoisting
+    console.log('>existe x antes do bloco?',x);
+    {
+        var x = 0
+    }
+    console.log('>existe x depois do bloco?', x);
+    
+    //const e let são locais e só funcionam no escopo onde foram criadas, tem que ser criado no mesmo scopo e anteriormente ao log.
+    let y = 1;
+    {
+        y = 0 //sem palavra chave (let) ele sobe escopos até achar a variável e atualiza ela, alterando so valores de y daqui para frente
+        console.log('>existe y', y);
+    }
+    console.log('> existe y depois do bloco?', y);
+</script>
