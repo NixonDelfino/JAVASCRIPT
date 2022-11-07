@@ -1,20 +1,31 @@
 /*
-     Function(contructor)
+Prototype
 
-     *expressão new
-     *criar um novo objeto
-     *this keyword
+   *prototype-based language
+   *prototype chain
+   *__proto__
 */
-// this se refere ao Person que está fora, assim puxando o nome do objeto para o log
-function Person(name) {
-    this.name = name
-    this.walk = function () {
-        return this.name + " está andando" // + " texto" = concatenar
-    }
-}
-const nixon = new Person("Nixon")
-const joao = new Person("João")
-console.log(nixon.walk());
-console.log(joao.walk());
+//direto no console
+//"Nixon".__proto__
+//23.0.__proto__
+//true.__proto__
 
-//new puxa a função como objeto, usando this na função se refere a todos os new com aquele nome
+/*
+Type conversion (type casting) vs type coersion
+
+*alteração de um tipo de dado para outro tipo de dado
+*/
+
+console.log('9' + 5); //coersao de tipo
+
+console.log(Number('9') + 5); //conversão de tipo
+
+//Manipulando Strings e Números
+// Trasnformar String em Número e Número em String
+
+let string = "123"
+console.log(Number(string));
+let number = 321
+console.log(String(number));
+
+4. contando caracteres e digitos
