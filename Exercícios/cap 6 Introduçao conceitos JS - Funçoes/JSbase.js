@@ -1,11 +1,21 @@
-// function expression
-// Function anonymous
+//arrow function
 
-//parameter
-const sum = function(number1, number2) {
-    console.log(number1 + number2);
+/*
+const sayMyName = (name) => {
+    console.log(name);
 }
 
-sum(2, 3)
-sum(9, 5) //arguments
+sayMyName('Nixon')
+*/
 
+//callback function
+
+function sayMyName(name) {
+    console.log(name);
+}
+
+sayMyName(
+    () => {
+        console.log('estou em uma callback');
+    }
+)
