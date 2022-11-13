@@ -1,27 +1,34 @@
-/*
-new
-*left-hand-side expression
-*criar um novo objeto
-*/
+// Grouping operator ( )
 
 /*
-let name = new String('Nixon')
-let age = new Number('26')
-
-console.log(name, age);
+let total = (2 + 3) * 5
+console.log(total); 
 */
 
-/*
-Operadores unários
-typeof
-delete
-*/
-const person = {
-    name:'Nixon',
-    age: 26,
-}
-console.log(typeof "Nixon")
-delete person.age
-console.log(person);
+//Operadores de comparação
 
-aula 3
+// irá comparar valores e retornar um boolean como resposta à comparação
+
+let one = 1
+let two = 2
+
+// igual a (==)
+
+console.log( two == 1);
+console.log( one == "1");
+
+// diferente de (!=)
+
+console.log(one != two);
+console.log(one != 1);
+console.log(one != "1");
+
+// estritamente igual a (===)
+
+console.log(one === "1");
+console.log(one === 1);
+
+// estritamente diferente de (!==)
+
+console.log(two !== "2");
+console.log(two !== 2);
