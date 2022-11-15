@@ -1,34 +1,27 @@
-// Grouping operator ( )
+// Operador de String (string operator)
 
+//comparison (comparação)
+//console.log('a' == 'b');
+
+//concatenation (concatenação)
+//retorna a união de duas strings
 /*
-let total = (2 + 3) * 5
-console.log(total); 
+let alpha = 'alpha'
+console.log(alpha + 'bet' + 123);
 */
 
-//Operadores de comparação
+//Type cpnversion (typecasting) vs Type coersion
 
-// irá comparar valores e retornar um boolean como resposta à comparação
+//console.log(Number ('9') + 5);
 
-let one = 1
-let two = 2
+/*
+FALSY
+Quando um valor é considerado false em contextos onde um booleano é obrigatório (condicionais e loops)
 
-// igual a (==)
-
-console.log( two == 1);
-console.log( one == "1");
-
-// diferente de (!=)
-
-console.log(one != two);
-console.log(one != 1);
-console.log(one != "1");
-
-// estritamente igual a (===)
-
-console.log(one === "1");
-console.log(one === 1);
-
-// estritamente diferente de (!==)
-
-console.log(two !== "2");
-console.log(two !== 2);
+false
+0
+-0
+""
+null
+undefined
+NaN
