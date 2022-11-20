@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4Fd 100%);
+    font-size: 1.6rem;
+}
+main{
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 48px 64px 64px ;
+    width: min(428px, 90%);
+}
