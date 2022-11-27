@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    --mainfont: 'Roboto', sans-serif;
+    
+    --ttheading: #0C3440;
+    
+    --ttlabel: #00453a;
+    
+    --ttinput: #212529;
+    --otinput: #02799D;
+    --bdinput: #4950574d;
+    
+    --ttplaceholder: #49505780;
+    
+    --ttbutton: white;
+    --bgbutton: #02799D;
+    
+    --bgerror: #F03E3E;
+    --tterror: white;
+}
+body{
+    font-family: var(--mainfont);
+    background-color: #040924;
+    font-size: 1.6rem;
+}
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: white;
+    box-shadow: 0 .2rem .4rem #0000001a;
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    max-width: 42.8rem;
+    border-radius: .6rem;
+}
