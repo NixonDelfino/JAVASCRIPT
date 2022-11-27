@@ -133,3 +133,24 @@ form button:hover{
 .modal button:hover{
     transform: scale(1.5);
 }
+/*alert error*/
+.alerterror.open{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.alerterror{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--bgerror);
+    text-align: center;
+    color: var(--tterror);
+    padding: .8rem 0;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+    transition: transform .5s;
+}
