@@ -27,9 +27,18 @@ button svg{
     width: clamp(3.2rem, 2rem + 12vw, 6.4.4rem);
 }
 body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--bgcolor);
     color: var(--txtcolor);
     font-family: var(--mainfont);
+}
+footer{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
 }
 button{
     background-color: transparent;
