@@ -9,17 +9,48 @@
 :root{
     font-size: 62.5%;
 
+    --primarycolor: 194;
+    
     --mainfont: 'Roboto', sans-serif;
     --bgcolor: #121214;
-    --basecolor: #42D3FF;
     --txtcolor: white;
+    --bgprimarylight: hsla(var(--primarycolor), 100%, 63%, 0.129);
+    --basecolor: hsl(var(--primarycolor), 100%, 63%);
+}
+.hide{
+    display: none;
+}
+.play svg path, .pause svg path, .sound-on svg path{
+    fill: var(--basecolor)
+}
+button svg{
+    width: clamp(3.2rem, 2rem + 12vw, 6.4.4rem);
 }
 body{
     background-color: var(--bgcolor);
     color: var(--txtcolor);
     font-family: var(--mainfont);
 }
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
 #timer{
     display: flex;
-    font-size: 8.8rem;
+    font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+    font-weight: bold;
+}
+
+#controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+
+    background-color: var(--bgprimarylight);
+    border-radius: 99.99rem;
+    width: clamp(10rem, 10rem + 30vw, 22.8rem);
+    height: clamp(8rem, 2rem + 10vw, 9.8rem);
 }
