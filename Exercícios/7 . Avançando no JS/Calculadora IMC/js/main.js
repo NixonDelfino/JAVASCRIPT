@@ -1,22 +1,9 @@
+import {modal} from './modal.js'
 //variables
 const form = document.querySelector('form')
 const inputWeight = document.querySelector('#weight')
 const inputHeight = document.querySelector('#height')
 
-const modal = {
-    wrapper: document.querySelector('.modal-wrapper'),
-    message: document.querySelector('.modal span'),
-    BtnClose: document.querySelector('.modal button.close'),
-
-
-    open() {
-        modal.wrapper.classList.add('open')
-
-    },
-    close() {
-        modal.wrapper.classList.remove('open')
-    },
-}
 
 form.onsubmit = function (event) {
     event.preventDefault()
@@ -29,11 +16,9 @@ form.onsubmit = function (event) {
 
     modal.message.innerText = message
     modal.open()
-
 }
-modal.BtnClose.onclick = () => {
-    modal.close()
-} 
+
+,,n..nfn
 function IMC(weight, height) {
     return (weight / ((height / 100 ) ** 2)).toFixed(2)
 }
