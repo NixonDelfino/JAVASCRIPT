@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --mainfont: 'Roboto', sans-serif;
+    --bgcolor: #121214;
+    --basecolor: #42D3FF;
+    --txtcolor: white;
+}
+body{
+    background-color: var(--bgcolor);
+    color: var(--txtcolor);
+    font-family: var(--mainfont);
+}
+#timer{
+    display: flex;
+    font-size: 8.8rem;
+}
