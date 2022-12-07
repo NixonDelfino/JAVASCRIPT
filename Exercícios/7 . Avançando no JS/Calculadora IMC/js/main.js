@@ -1,5 +1,5 @@
 import {modal} from './modal.js'
-import {AlertError} from "./alert-error.js";
+import {AlertError} from "./alert-error.js";asasas
 
 //variables
 const form = document.querySelector('form')
