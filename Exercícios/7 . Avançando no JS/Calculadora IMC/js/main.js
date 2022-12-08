@@ -13,7 +13,7 @@ form.onsubmit = function (event) {
 
     const weight = inputWeight.value
     const height = inputHeight.value
-
+    
     const weightOrHeightIsNotANumber = notNumber(weight) || notNumber(height)
 
     if (weightOrHeightIsNotANumber) {
