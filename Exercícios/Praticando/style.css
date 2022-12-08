@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+}
+main{
+    display: inline;
+    position: absolute;
+    left: 25rem;
+}
+aside{
+    width: 20rem;
+}
+aside h3{
+    font-size: 2rem;
+}
+aside p{
+    font-size: 1.2rem;
+}
+footer{
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
