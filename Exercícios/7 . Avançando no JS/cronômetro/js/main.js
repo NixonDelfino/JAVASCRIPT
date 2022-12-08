@@ -12,30 +12,29 @@ function progressSecondsValue(event) {
     let seconds = Number(secondsDisplay.textContent)
     let minutes = Number(minutesDisplay.textContent)
     
-    secondsDisplay.textContent = String(seconds - 1).padStart(2, "0")
+    updateTimerDisplay(minutes, 0)
 
     if (minutes <= 0) {
-       
-        buttonPlay.classList.remove('hide')
-        buttonPause.classList.add('hide')
-        buttonStop.classList.add('hide')
-        buttonSet.classList.remove('hide')
-        
+        resetControls()        
         return
     }
     
     if (seconds <= 0) {
         seconds = 60
-        minutesDisplay.textContent = minutes - 1
+        --minutes
     }
 
-    secondsDisplay.textContent = String(seconds - 1).padStart(2, "0")
-
+    updateTimerDisplay(minutes, String(seconds - 1))
+    
     countdown()
 }
 
 function countdown(event) {setTimeout(progressSecondsValue ,1000)}
+function updateTimerDisplay(minutes, seconds) {
+    minutesDisplay.textContent = String(minutes).padStart(2, "0")
+    secondsDisplay.textContent = String(seconds).padStart(2, "0")
 
+}
 function playPauseButtonChange(event) {
     buttonPlay.classList.toggle('hide')
     buttonPause.classList.toggle('hide')
@@ -44,7 +43,7 @@ function playPauseButtonChange(event) {
 
     countdown()
 }
-function stopApplication(event) {
+function resetControls(event) {
     buttonPlay.classList.remove('hide')
     buttonPause.classList.add('hide')
     buttonSet.classList.remove('hide')
@@ -54,14 +53,14 @@ function toggleSound(event) {
     buttonSoundOn.classList.toggle('hide')
     buttonSoundOff.classList.toggle('hide')
 }
-function changeTimerValue(event) {
-    minutes = prompt('Digite a quantidade de minutos para o cronômetro')
-    minutesDisplay.textContent = minutes
-}
+
 
 buttonPlay.addEventListener('click', playPauseButtonChange)
 buttonPause.addEventListener('click', playPauseButtonChange)
-buttonStop.addEventListener('click', stopApplication)
+buttonStop.addEventListener('click', resetControls)
 buttonSoundOn.addEventListener('click', toggleSound)
 buttonSoundOff.addEventListener('click', toggleSound)
-buttonSet.addEventListener('click', changeTimerValue)
+buttonSet.addEventListener('click', function () {
+        minutes = prompt('Digite a quantidade de minutos para o cronômetro')
+        updateTimerDisplay(minutes, 0)
+})
