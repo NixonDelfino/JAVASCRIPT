@@ -12,6 +12,18 @@ function progressSecondsValue(event) {
     let seconds = Number(secondsDisplay.textContent)
     let minutes = Number(minutesDisplay.textContent)
     
+    secondsDisplay.textContent = String(seconds - 1).padStart(2, "0")
+
+    if (minutes <= 0) {
+       
+        buttonPlay.classList.remove('hide')
+        buttonPause.classList.add('hide')
+        buttonStop.classList.add('hide')
+        buttonSet.classList.remove('hide')
+        
+        return
+    }
+    
     if (seconds <= 0) {
         seconds = 60
         minutesDisplay.textContent = minutes - 1
@@ -19,10 +31,6 @@ function progressSecondsValue(event) {
 
     secondsDisplay.textContent = String(seconds - 1).padStart(2, "0")
 
-    if (minutes <= 0) {
-        return
-    }
-    
     countdown()
 }
 
