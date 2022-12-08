@@ -8,13 +8,33 @@ const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
 let minutes
 
+function progressSecondsValue(event) {
+    let seconds = Number(secondsDisplay.textContent)
+    let minutes = Number(minutesDisplay.textContent)
+    
+    if (seconds <= 0) {
+        seconds = 60
+        minutesDisplay.textContent = minutes - 1
+    }
+
+    secondsDisplay.textContent = String(seconds - 1).padStart(2, "0")
+
+    if (minutes <= 0) {
+        return
+    }
+    
+    countdown()
+}
+
+function countdown(event) {setTimeout(progressSecondsValue ,1000)}
+
 function playPauseButtonChange(event) {
     buttonPlay.classList.toggle('hide')
     buttonPause.classList.toggle('hide')
     buttonStop.classList.remove('hide')
     buttonSet.classList.add('hide')
 
-    setTimeout(function () {secondsDisplay.textContent = Number(secondsDisplay.textContent) - 1}, 1000)
+    countdown()
 }
 function stopApplication(event) {
     buttonPlay.classList.remove('hide')
