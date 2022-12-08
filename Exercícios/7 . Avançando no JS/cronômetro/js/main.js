@@ -72,7 +72,7 @@ buttonStop.addEventListener('click', function () {
 })
 buttonSoundOn.addEventListener('click', toggleSound)
 buttonSoundOff.addEventListener('click', toggleSound)
-buttonSet.addEventListener('click', function () {,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+buttonSet.addEventListener('click', function () {
         let newMinutes = prompt('Digite a quantidade de minutos para o cronômetro')
         if(!newMinutes){
             resetTimer()
@@ -82,3 +82,5 @@ buttonSet.addEventListener('click', function () {,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         minutes = newMinutes
         updateTimerDisplay(minutes, 0)
 })
+
+aula 13
