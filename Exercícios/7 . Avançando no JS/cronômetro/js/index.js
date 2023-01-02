@@ -1,3 +1,6 @@
+import {resetControls, playPauseButtonChange, toggleSound} from "./controls.js" 
+import {resetTimer, updateTimerDisplay, timerTimeOut} from "./timer.js";
+
 const buttonPlay = document.querySelector('.play')
 const buttonPause = document.querySelector('.pause')
 const buttonStop = document.querySelector('.stop')
@@ -7,7 +10,8 @@ const buttonSoundOff = document.querySelector('.sound-off')
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
 let minutes = Number(minutesDisplay.textContent)
-let timerTimeOut
+
+export{buttonPlay, buttonPause, buttonStop, buttonSet, buttonSoundOn, buttonSoundOff, minutesDisplay, secondsDisplay, minutes, timerTimeOut}
 
 buttonPlay.addEventListener('click', playPauseButtonChange)
 buttonPause.addEventListener('click', function () {
