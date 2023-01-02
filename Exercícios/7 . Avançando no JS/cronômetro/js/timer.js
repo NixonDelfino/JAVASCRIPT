@@ -9,7 +9,7 @@ function updateTimerDisplay(minutes, seconds) {
 }
 function resetTimer() {
     updateTimerDisplay(minutes, 0)
-    clearTimeout()
+    clearTimeout(timerTimeOut)
 }
 function countdown(event) {
     timerTimeOut = setTimeout(progressSecondsValue ,1000)
@@ -22,6 +22,7 @@ function progressSecondsValue(event) {
         resetControls()        
         return
     }
+    
     if (seconds <= 0) {
         seconds = 60
         --minutes
