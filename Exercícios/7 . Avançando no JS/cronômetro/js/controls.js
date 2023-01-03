@@ -1,5 +1,8 @@
 import {buttonPause, buttonPlay, buttonStop, buttonSet, buttonSoundOff, buttonSoundOn} from "./index.js";
 import {countdown} from "./timer.js";
+import { Sounds } from "./sounds.js";
+
+const sound = Sounds()
 
 function resetControls(event) {
     buttonPlay.classList.remove('hide')
@@ -13,10 +16,7 @@ function playPauseButtonChange(event) {
     buttonStop.classList.remove('hide')
     buttonSet.classList.add('hide')
     countdown()
-}
-function toggleSound(event) {
-    buttonSoundOn.classList.toggle('hide')
-    buttonSoundOff.classList.toggle('hide')
+    sound.pressButton()
 }
 
-export {resetControls, playPauseButtonChange, toggleSound}
+export {resetControls, playPauseButtonChange}

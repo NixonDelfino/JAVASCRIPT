@@ -1,5 +1,6 @@
 import {secondsDisplay, minutesDisplay, minutes} from "./index.js";
 import {resetControls} from "./controls.js";
+import { Sounds } from "./sounds.js";
 
 let timerTimeOut
 
@@ -18,8 +19,10 @@ function progressSecondsValue(event) {
     let seconds = Number(secondsDisplay.textContent)
     let minutes = Number(minutesDisplay.textContent)
 
-    if (minutes <= 0) {
-        resetControls()        
+    if (minutes <= 0 && seconds <=0) {
+        resetControls()
+        resetTimer()
+        Sounds().timeEnd()
         return
     }
     
