@@ -114,6 +114,7 @@ td button{
     background: none;
     color: red;
     font-size: 2.3rem;
+    cursor: pointer;
 }
 
 #app{
