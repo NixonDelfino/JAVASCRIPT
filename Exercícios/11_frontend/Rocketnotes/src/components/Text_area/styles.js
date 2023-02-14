@@ -18,5 +18,3 @@ export const Container = styled.textarea`
         color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
 `
-
-aula 26

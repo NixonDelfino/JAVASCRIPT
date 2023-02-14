@@ -1,6 +1,12 @@
+import { Link } from "react-router-dom";
+
+import { NoteItem } from "../../components/Note_item"
+import { Textarea } from "../../components/Text_area"
+import { Section } from "../../components/Section"
+import { Button } from "../../components/button"
 import { Header } from "../../components/header"
 import { Input } from "../../components/Input"
-import { Textarea } from "../../components/Text_area"
+
 import { Container, Form } from "./styles"
 
 export function New() {
@@ -12,12 +18,26 @@ export function New() {
                 <Form>
                     <header>
                         <h1>Create Note</h1>
-                        <a href="/">Return</a>
+                       <Link to = "/">
+                            Return
+                       </Link>
                     </header>
 
                     <Input placeholder = "Title"/>
                     <Textarea placeholder = "Comments"/>
 
+                    <Section title = "Links Úteis">
+                        <NoteItem value = "https://github.com"/>
+                        <NoteItem isNew placeholder = "New link"/>
+                    </Section>
+                       
+                    <Section title = "Tags">
+                        <div className="tags">
+                            <NoteItem value = "react"/>
+                            <NoteItem isNew placeholder = "New tag"/>
+                        </div>
+                    </Section>
+                    <Button title = "Save" />
                 </Form>
             </main>
 
